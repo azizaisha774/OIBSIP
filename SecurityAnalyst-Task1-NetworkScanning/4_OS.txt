@@ -1,0 +1,17 @@
+# Nmap 7.991 scan initiated Thu Oct  8 23:24:46 2026 as: nmap -O -oN 4_OS.txt 127.0.0.1
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00013s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+445/tcp  open  microsoft-ds
+3306/tcp open  mysql
+7070/tcp open  realserver
+Device type: general purpose
+Running: Microsoft Windows 11
+OS CPE: cpe:/o:microsoft:windows_11
+OS details: Microsoft Windows 11 24H2 - 25H2
+Network Distance: 0 hops
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Oct  8 23:24:48 2026 -- 1 IP address (1 host up) scanned in 1.28 seconds

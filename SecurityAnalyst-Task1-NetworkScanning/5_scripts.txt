@@ -1,0 +1,38 @@
+# Nmap 7.991 scan initiated Thu Oct  8 23:27:07 2026 as: nmap -sC -sV -p 135,445,3306,7070 -oN 5_scripts.txt 127.0.0.1
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0017s latency).
+
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+445/tcp  open  microsoft-ds?
+3306/tcp open  mysql         MySQL 8.0.46
+| mysql-info: 
+|   Protocol: 10
+|   Version: 8.0.46
+|   Thread ID: 12
+|   Capabilities flags: 65535
+|   Some Capabilities: LongColumnFlag, Support41Auth, Speaks41ProtocolOld, SupportsCompression, SupportsLoadDataLocal, DontAllowDatabaseTableColumn, IgnoreSigpipes, IgnoreSpaceBeforeParenthesis, SupportsTransactions, FoundRows, Speaks41ProtocolNew, SwitchToSSLAfterHandshake, LongPassword, ODBCClient, InteractiveClient, ConnectWithDatabase, SupportsMultipleResults, SupportsMultipleStatments, SupportsAuthPlugins
+|   Status: Autocommit
+|   Salt: \x13Rnf<<?HY8W\x19KsM)|=\x1E.
+|_  Auth Plugin Name: caching_sha2_password
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=MySQL_Server_8.0.46_Auto_Generated_Server_Certificate
+| Not valid before: 2026-09-29T18:58:09
+|_Not valid after:  2036-09-26T18:58:09
+7070/tcp open  realserver?
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=AnyDesk Client
+| Not valid before: 2026-04-17T17:40:18
+|_Not valid after:  2076-04-04T17:40:18
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2026-10-08T18:27:23
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled and required
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Oct  8 23:27:29 2026 -- 1 IP address (1 host up) scanned in 22.28 seconds

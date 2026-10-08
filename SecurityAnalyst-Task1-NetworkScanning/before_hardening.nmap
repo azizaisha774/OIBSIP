@@ -1,0 +1,71 @@
+# Nmap 7.991 scan initiated Thu Oct  8 23:34:27 2026 as: nmap -A -p- -oA before_hardening 127.0.0.1
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00020s latency).
+Not shown: 65520 closed tcp ports (reset)
+PORT      STATE    SERVICE       VERSION
+135/tcp   open     msrpc         Microsoft Windows RPC
+137/tcp   filtered netbios-ns
+445/tcp   open     microsoft-ds?
+3306/tcp  open     mysql         MySQL 8.0.46
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=MySQL_Server_8.0.46_Auto_Generated_Server_Certificate
+| Not valid before: 2026-09-29T18:58:09
+|_Not valid after:  2036-09-26T18:58:09
+| mysql-info: 
+|   Protocol: 10
+|   Version: 8.0.46
+|   Thread ID: 1550
+|   Capabilities flags: 65535
+|   Some Capabilities: Support41Auth, ConnectWithDatabase, SupportsCompression, InteractiveClient, DontAllowDatabaseTableColumn, SupportsTransactions, LongPassword, Speaks41ProtocolNew, LongColumnFlag, IgnoreSigpipes, SwitchToSSLAfterHandshake, SupportsLoadDataLocal, IgnoreSpaceBeforeParenthesis, FoundRows, ODBCClient, Speaks41ProtocolOld, SupportsMultipleResults, SupportsAuthPlugins, SupportsMultipleStatments
+|   Status: Autocommit
+|   Salt: Fw\x16\x1F\x1Ao"\x05\x1B%z\x1D%o\x13\x1A>\x0Bc\x0B
+|_  Auth Plugin Name: caching_sha2_password
+4709/tcp  open     unknown
+| ssl-cert: Subject: commonName=localhost.wbridge.wps.com
+| Subject Alternative Name: DNS:localhost.wbridge.wps.com
+| Not valid before: 2026-05-20T00:00:00
+|_Not valid after:  2026-12-04T23:59:59
+|_ssl-date: TLS randomness does not represent time
+5040/tcp  open     unknown
+7070/tcp  open     realserver?
+| ssl-cert: Subject: commonName=AnyDesk Client
+| Not valid before: 2026-04-17T17:40:18
+|_Not valid after:  2076-04-04T17:40:18
+|_ssl-date: TLS randomness does not represent time
+7680/tcp  open     pando-pub?
+33060/tcp open     mysqlx        MySQL X protocol listener
+49664/tcp open     unknown
+49665/tcp open     unknown
+49666/tcp open     unknown
+49667/tcp open     unknown
+49668/tcp open     unknown
+49673/tcp open     unknown
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.991%E=4%D=10/8%OT=135%CT=1%CU=35635%PV=Y%DS=0%DC=L%G=Y%TM=6AC7E
+OS:2A2%P=i686-pc-windows-windows)SEQ(SP=100%GCD=1%ISR=10A%TI=I%CI=I%TS=A)SE
+OS:Q(SP=103%GCD=1%ISR=10C%TI=I%CI=I%TS=A)SEQ(SP=104%GCD=1%ISR=10A%TI=I%CI=I
+OS:%TS=A)SEQ(SP=105%GCD=1%ISR=10A%TI=I%CI=I%TS=A)SEQ(SP=FB%GCD=2%ISR=10D%TI
+OS:=I%CI=I%II=I%SS=S%TS=A)OPS(O1=MFFD7NW8ST11%O2=MFFD7NW8ST11%O3=MFFD7NW8NN
+OS:T11%O4=MFFD7NW8ST11%O5=MFFD7NW8ST11%O6=MFFD7ST11)WIN(W1=FFFF%W2=FFFF%W3=
+OS:FFFF%W4=FFFF%W5=FFFF%W6=FFFF)ECN(R=Y%DF=Y%T=80%W=FFFF%O=MFFD7NW8NNS%CC=N
+OS:%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%
+OS:F=AR%O=%RD=0%Q=)T3(R=Y%DF=Y%T=80%W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y
+OS:%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%R
+OS:D=0%Q=)T6(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0%
+OS:S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPC
+OS:K=G%RUCK=G%RUD=G)IE(R=N)IE(R=Y%DFI=N%T=80%CD=Z)
+
+Network Distance: 0 hops
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2026-10-08T18:34:53
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled and required
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Oct  8 23:36:18 2026 -- 1 IP address (1 host up) scanned in 111.93 seconds
